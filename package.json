@@ -1,0 +1,48 @@
+{
+  "name": "@dwlib/internal-slot",
+  "version": "1.0.0",
+  "description": "Internal Slot API",
+  "main": "lib/index.js",
+  "imports": {
+    "#intrinsic": "@dwlib/intrinsic",
+    "#intrinsic/*": "@dwlib/intrinsic/*",
+    "#type": "@dwlib/type",
+    "#type/*": "@dwlib/type/*",
+    "#internal": {
+      "require": "./lib/internal/index.js",
+      "import": "./lib/internal/index.mjs"
+    }
+  },
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./*": {
+      "require": "./lib/*.js",
+      "import": "./lib/*.mjs"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dwlib-js/internal-slot.git"
+  },
+  "keywords": [
+    "internal",
+    "slot"
+  ],
+  "author": "Pavel Wolf",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/dwlib-js/internal-slot/issues"
+  },
+  "homepage": "https://github.com/dwlib-js/internal-slot#readme",
+  "dependencies": {
+    "@dwlib/intrinsic": "^1.0.0",
+    "@dwlib/type": "^1.0.0"
+  }
+}
